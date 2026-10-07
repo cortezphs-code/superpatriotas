@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#092d26"><title>Super Patriotas • A missão</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main>
+ <header><a class="brand" href="./">SP<span>SUPER PATRIOTAS</span></a><span class="edition">AVENTURA ARCADE · FASE 01</span><button id="sound" aria-label="Ativar som">Som: OFF</button></header>
+ <section class="heading"><div><span class="eyebrow">DOIS HERÓIS. UMA MISSÃO.</span><h1>SUPER <em>PATRIOTAS</em></h1><p>Escolha seu patriota. Pule os obstáculos. Chegue à bandeira.</p></div><div class="badge">★<span>MISSÃO<br>BRASIL</span></div></section>
+ <section class="arcade" aria-label="Jogo Super Patriotas">
+  <div class="hud"><span id="heroLabel">ESCOLHA SEU HERÓI</span><span id="coins">★ 00</span><span id="lives">♥ ♥ ♥</span><span id="timer">00:00</span><button id="pause" disabled aria-label="Pausar jogo">Ⅱ</button></div>
+  <div class="screen"><canvas id="game" width="960" height="540" aria-label="Jogo de plataforma: use setas para andar e espaço para pular"></canvas>
+   <div id="menu" class="overlay"><div class="panel"><span class="eyebrow">PRONTO PARA A MISSÃO?</span><h2>Escolha seu patriota</h2><div class="choices"><button class="choice selected" data-hero="patriota1" aria-pressed="true"><span class="portrait patriota1"></span><strong>Patriota 1</strong><span>CAMISA AMARELA</span></button><button class="choice" data-hero="patriota2" aria-pressed="false"><span class="portrait patriota2"></span><strong>Patriota 2</strong><span>CAMISA VERDE</span></button></div><button id="start" class="primary" disabled>CARREGANDO…</button><p class="hint">Pegue joias para crescer! Pequeno, encostar no Lula ou PT custa uma vida.</p><p id="loadError" role="alert"></p></div></div>
+   <div id="result" class="overlay hidden"><div class="panel"><span id="resultTag" class="eyebrow"></span><h2 id="resultTitle"></h2><p id="resultText" aria-live="polite"></p><button id="retry" class="primary">JOGAR NOVAMENTE</button><button id="choose" class="secondary">TROCAR PATRIOTA</button></div></div>
+   <div id="paused" class="overlay hidden"><div class="panel"><h2>Missão em pausa</h2><button id="resume" class="primary">CONTINUAR ▶</button><button id="pauseChoose" class="secondary">TROCAR PATRIOTA</button></div></div>
+  </div>
+  <div class="touch"><div><button data-key="left" aria-label="Andar para esquerda">◀</button><button data-key="right" aria-label="Andar para direita">▶</button></div><button data-key="jump" class="jump" aria-label="Pular">PULAR ↑</button></div>
+ </section>
+ <footer><div><strong>COMO JOGAR</strong><span><kbd>←</kbd> <kbd>→</kbd> ou A/D para andar &nbsp; <kbd>ESPAÇO</kbd> ou W/↑ para pular &nbsp; <kbd>P</kbd> pausa</span></div><p>Celular: use os botões abaixo do jogo. Toque em PULAR novamente no ar para um salto duplo. Joias fazem crescer; um golpe faz encolher.<br>Ficção e sátira política • Personagens e cenário originais.</p></footer>
+</main><script src="world.js"></script><script src="game.js"></script>
+</body></html>
